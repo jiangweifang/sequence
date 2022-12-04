@@ -39,7 +39,7 @@ BEGIN
 	END IF;
 	
 	IF (is_date = 1) THEN
-		SET _result = CONCAT(IF(ISNULL(as_prefix),'',as_prefix), DATE_FORMAT(NOW(),'%Y%m%d%H%i%S'), _result);
+		SET _result = CONCAT(IF(ISNULL(as_prefix),'',as_prefix), DATE_FORMAT(NOW(),'%Y%m%d'), _result);
 	ELSE
 		SET _result = CONCAT(IF(ISNULL(as_prefix),'',as_prefix), _result);
 	END IF;
